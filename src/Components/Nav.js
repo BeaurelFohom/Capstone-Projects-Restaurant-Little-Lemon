@@ -30,7 +30,7 @@ const navigation = [
 const Nav = () => {
     return (
         <nav>
-            <ul>
+            <ul className='menuList'>
                 {navigation.map((nav, index) => {
                     return <li key={index}><a href={nav.url}>{nav.link}</a></li>
                 })}
