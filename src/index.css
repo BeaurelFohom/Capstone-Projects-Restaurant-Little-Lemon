@@ -14,10 +14,79 @@ code {
     monospace;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.container {
+  grid-column: 2;
+}
+
+.flex-space-between{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-2 {
+  flex: 2;
+}
+
 .button{
   background-color: var(--yellow);
   border-radius: 10px;
   font-size: 16px;
   font-weight: 700;
-  height: 35px;
+  height: 40px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/*---------BookigForm---------*/
+
+.form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-group {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.form-label {
+  flex: 1;
+}
+
+.form-control {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input, .form-select {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--black);
+}
+
+.form-error {
+  color: red;
 }

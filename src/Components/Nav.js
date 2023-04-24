@@ -1,9 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const navigation = [
     {
         link: 'Home',
-        url: '/#home'
+        url: '/'
     },
     {
         link: 'About',
@@ -15,7 +16,7 @@ const navigation = [
     },
     {
         link: 'Reservations',
-        url: '/#reservations'
+        url: '/booking'
     },
     {
         link: 'Order Online',
@@ -32,7 +33,11 @@ const Nav = () => {
         <nav>
             <ul className='menuList'>
                 {navigation.map((nav, index) => {
-                    return <li key={index}><a href={nav.url}>{nav.link}</a></li>
+                    return (
+                            <li key={index}>
+                                {nav.link === 'Reservations' || nav.link === 'Home'? <Link to={nav.url}>{nav.link}</Link> :  <a href={nav.url}>{nav.link}</a>}
+                            </li>
+                        )
                 })}
             </ul>
         </nav>

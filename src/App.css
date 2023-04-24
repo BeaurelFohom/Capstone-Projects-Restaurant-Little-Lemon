@@ -1,17 +1,14 @@
 :root {
     --green : #495E57;
     --saumon : #EE9972;
-    --clair: #FBDABB;
+    --clair: #f1e4d7;
     --white : #EDEFEE;
     --black : #333333;
     --yellow :#F4CE14
 }
 
 /*-------Header component--------*/
-header {
-    display: flex;
-    justify-content: center;
-}
+
 
 /*-------Nav component--------*/
 
@@ -36,14 +33,12 @@ header {
 .HeroSection{
     height: 230px;
     background-color: var(--green);
-    display: flex;
-    justify-content: center;
-    gap: 80px;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .HeroPresentation {
-    width: 245px;
+    width:  250px;
     color: var(--white);
 }
 
@@ -58,9 +53,91 @@ header {
     margin-top: 50px;
 }
 
-.SpecialHeader{
+.SpecialHeader {
+    margin-bottom: 10px;
+}
+
+.SpecialBody {
+    gap: 25px;
+    padding: 0;
+}
+
+.CardSpecial {
+    width: 210px;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.CardSpecial img{
+    height: 200px;
+    width: 100%;
+}
+
+.CardSpecialHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CardSpecialHeader span:nth-child(2){
+    color: var(--yellow);
+}
+
+.CardSpecialBody {
+    height: 140px;
+}
+
+/*------Testimonials--------*/
+
+.Testimonials {
+    background-color: var(--clair);
+    padding-bottom: 20px;
+}
+
+.TestimonialsContainer {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.CardTestimonials{
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.CardTestimonialsHeader {
+    display: flex;
     align-items: center;
-    gap: 140px;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/*------About--------*/
+.About {
+    margin-top: 80px;
+}
+
+.AboutPresentation {
+    width: 450px;
+}
+
+.AboutImage{
+    position: relative;
+    width: 200px;
+}
+
+.AboutImage img:first-child{
+    position: absolute;
+    bottom: -10px;
+    left: -120px;
+    border-radius: 10px;
+}
+
+.AboutImage img:last-child{
+    position: absolute;
+    border-radius: 10px;
+    bottom: 120px;
+    left: 0px;
 }
