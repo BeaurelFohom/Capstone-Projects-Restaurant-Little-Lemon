@@ -141,3 +141,89 @@
     bottom: 120px;
     left: 0px;
 }
+
+
+/*---------BookigForm---------*/
+
+.form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .form-group {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .form-label {
+    flex: 1;
+  }
+  
+  .form-control {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-input, .form-select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--black);
+  }
+  
+  .form-error {
+    color: red;
+  }
+  
+  .ListTime .form-group {
+    display: inline-flex;
+  }
+
+  .ListTime .form-input {
+    margin-left: 5px;
+    width: 200px;
+  }
+  
+  
+  /*--------BookingSLot----------*/
+  
+  .BookingSlot {
+    border-radius: 20px;
+    padding: 5px;
+    background-color: var(--green);
+    font-size: large;
+    font-weight: bold;
+    color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*----------Footer--------*/
+
+.Footer {
+    padding: 15px;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.Footer ul {
+    padding: 0px;
+}
+
+.Footer ul li{
+    list-style: none;
+}
+
+.Footer ul li a{
+    text-decoration: none;
+    outline: none;
+    padding: 2px 1px ;
+    color: var(--white);
+}
+
+ 

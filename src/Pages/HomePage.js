@@ -4,6 +4,7 @@ import HeroSection from '../Components/HeroSection';
 import Special from '../Components/Special';
 import Testimonials from '../Components/Testimonials'
 import About from '../Components/About';
+import Footer from '../Components/Footer';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <Special/>
             <Testimonials/>
             <About/>
+            <Footer/>
         </>
     );
 };

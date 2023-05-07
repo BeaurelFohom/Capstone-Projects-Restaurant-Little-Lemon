@@ -27,7 +27,7 @@ const dishes = [
 
 const Special = () => {
     return (
-        <div className='grid SpecialSection'>
+        <section className='grid SpecialSection'>
             <div className='container'>
                 <div className='SpecialHeader flex-center'>
                     <h1 className='flex-1'>This weeks specials!</h1>
@@ -48,7 +48,7 @@ const Special = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

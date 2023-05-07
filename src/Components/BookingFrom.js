@@ -1,40 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const BookingFrom = () => {
+const BookingFrom = (props) => {
+    const [Booking, setBooking] = useState({
+        date:'',
+        time:'',
+        guest:0,
+        occasion:''
+    })
+
+    const updateTime = (e) => {
+        props.updateAvailable(e)   
+        setBooking({
+            ...Booking, date: e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(Booking)
+    }
     return (
-        <div className='grid'>
+        <section className='grid'>
             <div className='grid container'>
-                <form className='container form'>
+                <form className='container form' onSubmit={handleSubmit}>
                     <h1>Booking Table</h1>
                     <div className='form-group'>
-                        <label className='form-label' for="res-date">Choose date :</label>
+                        <label className='form-label' htmlFor="res-date">Choose date :</label>
                         <div className='form-control'>
-                            <input className='form-input' type="date" id="res-date"/>
+                            <input className='form-input' type="date" id="res-date" value={props.value} onChange={updateTime}/>
                         </div>
                     </div>
                     <div className='form-group'>
-                        <label className='form-label' for="res-time">Choose time :</label>
+                        <label className='form-label' htmlFor="res-time">Choose time :</label>
                         <div className='form-control'>
-                            <select className='form-select' id="res-time ">
-                                <option>17:00</option>
-                                <option>18:00</option>
-                                <option>19:00</option>
-                                <option>20:00</option>
-                                <option>21:00</option>
-                                <option>22:00</option>
+                            <select className='form-select' id="res-time " onChange={(e) => {setBooking({
+                                ...Booking, time: e.target.value})}}
+                                >
+                                {props.availableTimes.map((time, index) => {
+                                    return <option key={index}>{time}</option>
+                                })}
                             </select>
                         </div>
                     </div>
                     <div className='form-group'>
-                        <label className='form-label' for="guests">Number of guests :</label>
+                        <label className='form-label' htmlFor="guests">Number of guests :</label>
                         <div className='form-control'>
-                            <input className='form-input' type="number" placeholder="1" min="1" max="10" id="guests"/>
+                            <input className='form-input' type="number" placeholder="1" min="1" max="10" id="guests" onChange={(e) => {setBooking({
+                                ...Booking, guest: e.target.value})}}/>
                         </div>
                     </div>
                     <div className='form-group'>
-                        <label className='form-label' for="occasion">Occasion :</label>
+                        <label className='form-label' htmlFor="occasion">Occasion :</label>
                         <div className='form-control'>
-                            <select className='form-select' id="occasion">
+                            <select className='form-select' id="occasion" onChange={(e) => {setBooking({
+                                ...Booking, occasion: e.target.value})}}>
                                 <option>Birthday</option>
                                 <option>Anniversary</option>
                             </select>
@@ -43,7 +62,7 @@ const BookingFrom = () => {
                     <input className='button' type="submit" value="Make Your reservation"></input>
                 </form>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -30,7 +30,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <div className='grid Testimonials'>
+        <section className='grid Testimonials'>
             <div className='container'>
                 <h1 style={{display:'flex', justifyContent:'center'}}>What our customers say!</h1>
                 <div className='flex-space-between'>
@@ -53,7 +53,7 @@ const Testimonials = () => {
                 }
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

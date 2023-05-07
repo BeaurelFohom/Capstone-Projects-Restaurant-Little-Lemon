@@ -54,39 +54,3 @@ code {
 .button:hover {
   cursor: pointer;
 }
-
-/*---------BookigForm---------*/
-
-.form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.form-group {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.form-label {
-  flex: 1;
-}
-
-.form-control {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-input, .form-select {
-  height: 40px;
-  border-radius: 5px;
-  border: 2px solid var(--black);
-}
-
-.form-error {
-  color: red;
-}

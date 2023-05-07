@@ -8,7 +8,7 @@ const HeroSection = () => {
     const navigate = useNavigate()
     
     return (
-        <div className='grid HeroSection'>
+        <section className='grid HeroSection'>
             <div className='container'>
                 <div className='flex-space-between'>
                     <div className='HeroPresentation'>
@@ -21,7 +21,7 @@ const HeroSection = () => {
                 </div>
                 
             </div>
-        </div>
+        </section>
     )
 };
 
