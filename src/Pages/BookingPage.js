@@ -1,11 +1,14 @@
 import React, {useReducer} from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import BookingFrom from '../Components/BookingFrom';
+import BookingForm from '../Components/BookingForm';
 import HeroSection from '../Components/HeroSection'
 import AvailableTimes from '../Components/AvailableTimes';
+import { useNavigate } from 'react-router-dom';
 
 const BookingPage = () => {
+
+    const navigate = useNavigate() 
 
     const seededRandom = function (seed) {
         var m = 2**35 - 31;
@@ -34,6 +37,12 @@ const BookingPage = () => {
     const submitAPI = function(formData) {
         return true;
     };
+
+    const submitForm = (data) => {
+        if(submitAPI(data)){
+            navigate('/confirmed-booking')
+        }
+    }
 
     const initializeTimes = () => {
         const date = new Date()
@@ -74,8 +83,8 @@ const BookingPage = () => {
         <>
             <Header/>
             <HeroSection/>
-            <BookingFrom value = {state.selectedDate.toJSON().split('T')[0]} 
-            availableTimes = {state.availableTimes} updateAvailable = {handleUpdateAvailable}/>
+            <BookingForm availableTimes = {state.availableTimes} updateAvailable = {handleUpdateAvailable}
+            submitForm={submitForm}/>
             <AvailableTimes value = {state.selectedDate.toJSON().split('T')[0]} 
             availableTimes = {state.availableTimes} handleUpdateAvailable = {handleUpdateAvailable}/>
             <Footer/>

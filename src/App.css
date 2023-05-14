@@ -150,48 +150,48 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-  }
+}
   
-  .form-group {
-    height: 50px;
+.form-group {
+    height: 70px;
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-  }
-  
-  .form-label {
+}
+
+.form-label {
     flex: 1;
-  }
-  
-  .form-control {
+}
+
+.form-control {
     flex: 2;
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-input, .form-select {
+}
+
+.form-input, .form-select {
     height: 40px;
     border-radius: 5px;
     border: 2px solid var(--black);
-  }
-  
-  .form-error {
-    color: red;
-  }
-  
-  .ListTime .form-group {
-    display: inline-flex;
-  }
+}
 
-  .ListTime .form-input {
+.form-error {
+    color: red;
+}
+
+.ListTime .form-group {
+    display: inline-flex;
+}
+
+.ListTime .form-input {
     margin-left: 5px;
     width: 200px;
-  }
-  
-  
-  /*--------BookingSLot----------*/
-  
-  .BookingSlot {
+}
+
+
+/*--------BookingSLot----------*/
+
+.BookingSlot {
     border-radius: 20px;
     padding: 5px;
     background-color: var(--green);
@@ -201,9 +201,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  /*----------Footer--------*/
+/*----------Footer--------*/
 
 .Footer {
     padding: 15px;
