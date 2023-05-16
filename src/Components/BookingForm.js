@@ -3,12 +3,6 @@ import {useFormik} from 'formik'
 import * as Yup from 'yup'
 
 const BookingForm = (props) => {
-    /*const [Booking, setBooking] = useState({
-        date:'',
-        time:'',
-        guest:0,
-        occasion:''
-    })*/
 
     const formik = useFormik({
         initialValues:{
@@ -51,14 +45,15 @@ const BookingForm = (props) => {
                     <div className='form-group'>
                         <label className='form-label' htmlFor="res-time">Choose time :</label>
                         <div className='form-control'>
-                            <select className='form-select' id="res-time " 
+                            <select className='form-select' id="res-time"
                             {...formik.getFieldProps('time')} 
                                 >
+                                <option value='choose time'>Choose time</option>
                                 {props.availableTimes.map((time, index) => {
-                                    return <option key={index}>{time}</option>
+                                    return <option key={index} value={time}>{time}</option>
                                 })}
-                                {formik.errors.time && formik.touched.time? <div className='form-error'>{formik.errors.time}</div>: null}
                             </select>
+                            {formik.errors.time && formik.touched.time? <div className='form-error'>{formik.errors.time}</div>: null}
                         </div>
                     </div>
                     <div className='form-group'>
@@ -74,8 +69,9 @@ const BookingForm = (props) => {
                         <div className='form-control'>
                             <select className='form-select' id="occasion" value='Birthday'
                             {...formik.getFieldProps('occasion')} >
-                                <option >Birthday</option>
-                                <option>Anniversary</option>
+                                <option value='choose time'>Choose occasion</option>
+                                <option value='Birthday'>Birthday</option>
+                                <option value='Anniversary'>Anniversary</option>
                             </select>
                             {formik.errors.occasion && formik.touched.occasion? <div className='form-error'>{formik.errors.occasion}</div>: null}
                         </div>

@@ -28,6 +28,18 @@
     color: var(--black);
 }
 
+.active{
+    background-color: var(--green);
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+}
+
+.menuList .active a {
+    color: var(--white);
+}
+
 /*---------Hero section -------------*/
 
 .HeroSection{

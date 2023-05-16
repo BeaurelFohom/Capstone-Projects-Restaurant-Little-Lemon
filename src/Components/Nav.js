@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 
 const navigation = [
@@ -24,17 +24,18 @@ const navigation = [
     },
     {
         link: 'Login',
-        url: '/#login'
+        url: '/login'
     }
 ]
 
 const Nav = () => {
+    const [Index, setIndex] = useState(0)
     return (
         <nav>
             <ul className='menuList'>
                 {navigation.map((nav, index) => {
                     return (
-                            <li key={index}>
+                            <li key={index} className={Index === index? 'active': ''} onClick={() => setIndex(index)}>
                                 {nav.link === 'Reservations' || nav.link === 'Home'? <Link to={nav.url}>{nav.link}</Link> :  <a href={nav.url}>{nav.link}</a>}
                             </li>
                         )
